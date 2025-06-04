@@ -1,0 +1,14 @@
+# Target labels
+ raylib-populate
+# Source files and their labels
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test.rule
+C:/tetris_cpp-project/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update.rule
