@@ -7,6 +7,7 @@
 #include "ScoreSystem.hpp"
 #include "EndScreen.hpp"
 #include "RankingPage.hpp"
+#include "HowToPlay.hpp"
 
 class GameManager {
 private:
@@ -16,7 +17,8 @@ private:
     GameScene* gameScene = nullptr;
     EndScreen* endScreen = nullptr;
     RankingPage* rankingPage = nullptr;
-    
+    HowToPlay* howToPlay = nullptr;
+
     bool singlePlayerMode = true;
     int mode;
     int difficulty;

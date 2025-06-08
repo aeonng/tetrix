@@ -5,7 +5,6 @@ StartPage::StartPage() {
     selectedIndex = 0;
 }
 
-
 GameState StartPage::update() {
     if (IsKeyPressed(KEY_UP)) {
         if (selectedIndex >= 2) {
@@ -33,6 +32,7 @@ GameState StartPage::update() {
     }
 
     if (IsKeyPressed(KEY_ENTER)) {
+        AudioUtil::playMoveSound();
         switch (selectedIndex) {
             case 0: return GameState::HOW_TO_PLAY;
             case 1: return GameState::RANKING;
@@ -70,7 +70,7 @@ void StartPage::draw() {
         float posX = startX + col * spacingX;
         float posY = startY + row * spacingY;
 
-        Color color = (i == selectedIndex) ? RED : WHITE;
+        Color color = (i == selectedIndex) ? GOLD : WHITE;
         TextUtil::drawText(menuItems[i], {posX, posY}, 30, color);
     }
 

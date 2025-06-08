@@ -10,8 +10,8 @@ private:
     const char* menuItems[4] = {
         "HOW TO PLAY",
         "RANKINGS",
-        "2D Player",
-        "1D Player"
+        "  2D PLAYER",
+        "1D PLAYER"
     };
 
 

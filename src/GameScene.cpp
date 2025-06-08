@@ -110,6 +110,11 @@ void GameScene::updatePlayer(int p) {
             lastClearCountRef = clearedRef;
             if (clearedRef > 0) {
                 std::cout << "lastClearCountRef: " << lastClearCountRef << std::endl;
+                
+                if (clearedRef > 0) {  // 줄 삭제 후 아이템을 획득한 경우에만
+                    AudioUtil::playItemSound();  // 아이템 획득 시 효과음 재생
+                }
+                
                 if (wasCleared) comboRef++;
                 lines += clearedRef;
                 scoreRef += 100 * clearedRef + 100 * comboRef;

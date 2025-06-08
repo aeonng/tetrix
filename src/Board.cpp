@@ -100,9 +100,15 @@ int Board::clearFullLines() {
         int row = rowsToClear[i];
         lastClearedLines.push_back(row);
         grid.erase(grid.begin() + row);  // 해당 줄 제거
+
     }
 
-    // 4. 맨 위에서부터 비어있는 줄 추가
+    // 4. 줄 삭제 시 효과음
+    if (cleared > 0) {
+        AudioUtil::playDeleteSound();  
+    }
+
+    // 5. 맨 위에서부터 비어있는 줄 추가
     for (int i = 0; i < cleared; i++) {
         grid.insert(grid.begin(), std::vector<Grid>(width, Grid()));
     }

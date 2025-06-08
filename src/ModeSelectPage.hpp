@@ -15,8 +15,8 @@ private:
     bool editingNickname;
     bool editingGoal;
 
-    const std::array<const char*, 2> modes = {"Marathon", "Sprint"};
-    const std::array<const char*, 3> difficulties = {"Easy", "Normal", "Hard"};
+    const std::array<const char*, 2> modes = {"MARATHON", "SPRINT"};
+    const std::array<const char*, 3> difficulties = {"EASY", "NORMAL", "HARD"};
     const std::array<const int, 4> sprint = {30, 50, 80, 100};
 
 public:

@@ -6,8 +6,8 @@ namespace TextUtil {
     static Font boldFont;
 
     void loadFonts() {
-        regularFont = LoadFont("assets/fonts/pixel.ttf");
-        boldFont = LoadFont("assets/fonts/pixel_bold.ttf");
+        regularFont = LoadFont("assets/fonts/IMFellEnglish-Regular.ttf");
+        boldFont = LoadFont("assets/fonts/IMFellEnglish-Regular.ttf");
     }
 
     void unloadFonts() {
@@ -97,12 +97,19 @@ namespace DrawUtil {
     }
 
     void loadBackgroundTextures() {
-        // 예시로 타이틀 화면용 background ID = 0
+        // 타이틀 화면용 background ID = 0
         std::string path = "assets/info_pages/title.jpg";
         Image img = LoadImage(path.c_str());
         Texture2D tex = LoadTextureFromImage(img);
         backgroundTextures[0] = tex;
         UnloadImage(img);
+
+        // 랭킹판 화면용 background ID = 1
+        std::string boardPath = "assets/info_pages/board.png";
+        Image boardImg = LoadImage(boardPath.c_str());
+        Texture2D boardTex = LoadTextureFromImage(boardImg);
+        backgroundTextures[1] = boardTex;
+        UnloadImage(boardImg);
     }
 
     void unloadBackgroundTextures() {

@@ -12,6 +12,7 @@ GameManager::~GameManager() {
     if (gameScene) delete gameScene;
     if (endScreen) delete endScreen;
     if (rankingPage) delete rankingPage;
+    if (howToPlay) delete howToPlay;
 }
 
 void GameManager::run() {
@@ -27,7 +28,7 @@ void GameManager::run() {
 }
 
 void GameManager::update() {
-    switch (state) {
+    /*switch (state) {
         //case GameState::MODE_SELECT:
         case GameState::HOW_TO_PLAY:
         //case GameState::RANKING:
@@ -38,9 +39,15 @@ void GameManager::update() {
                 return;
             }
             break;
-    }
+    }*/
 
     switch (state) {
+
+        case GameState::HOW_TO_PLAY:
+            if (!howToPlay) howToPlay = new HowToPlay();  // 처음 한 번만 객체 생성
+            state = howToPlay->update();  // HowToPlay 상태 업데이트
+            break;
+
         case GameState::START:
             state = startPage.update();
             if (state == GameState::MODE_SELECT) {
@@ -111,6 +118,9 @@ void GameManager::draw() {
             break;
         case GameState::GAME_END:
             if (endScreen) endScreen -> render();
+            break;
+        case GameState::HOW_TO_PLAY:
+            if (howToPlay) howToPlay -> draw();
             break;
         default:
             TextUtil::drawText("Next page not implemented", Vector2{400.0f, 400.0f}, 20, GRAY);
