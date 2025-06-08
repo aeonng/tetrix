@@ -110,6 +110,20 @@ namespace DrawUtil {
         Texture2D boardTex = LoadTextureFromImage(boardImg);
         backgroundTextures[1] = boardTex;
         UnloadImage(boardImg);
+
+        // 게임 화면용 background ID = 2
+        std::string scenePath = "assets/info_pages/gamescene.png";
+        Image sceneImg = LoadImage(scenePath.c_str());
+        Texture2D sceneTex = LoadTextureFromImage(sceneImg);
+        backgroundTextures[2] = sceneTex;
+        UnloadImage(sceneImg);
+
+        // 게임 방법용 background ID = 3
+        std::string howPath = "assets/info_pages/howtoplay.png";
+        Image howImg = LoadImage(howPath.c_str());
+        Texture2D howTex = LoadTextureFromImage(howImg);
+        backgroundTextures[3] = howTex;
+        UnloadImage(howImg);
     }
 
     void unloadBackgroundTextures() {
@@ -177,12 +191,16 @@ namespace AudioUtil {
     Music mainMusic;
     Sound deleteSound;
     Sound ItemSound;
+    Sound blockSound;
+    Sound comboSound;
 
     void loadSounds() {
         mainMusic = LoadMusicStream("assets/bgm/A_Bleeding_Fight.mp3");
         moveSound = LoadSound("assets/bgm/button.mp3");
         deleteSound = LoadSound("assets/bgm/get_item.mp3");
         ItemSound = LoadSound("assets/bgm/line_delete.mp3");
+        blockSound = LoadSound("assets/bgm/button.mp3");
+        comboSound = LoadSound("assets/bgm/combo.mp3");
         PlayMusicStream(mainMusic);
     }
 
@@ -190,6 +208,8 @@ namespace AudioUtil {
         UnloadSound(moveSound);
         UnloadSound(deleteSound);
         UnloadSound(ItemSound);
+        UnloadSound(blockSound);
+        UnloadSound(comboSound);
         UnloadMusicStream(mainMusic);
     }
 
@@ -203,6 +223,14 @@ namespace AudioUtil {
 
     void playItemSound() {
         PlaySound(ItemSound);
+    }
+
+    void playblockSound() {
+        PlaySound(blockSound);
+    }
+
+    void playcomboSound() {
+        PlaySound(comboSound);
     }
 
     void playMainSound() {

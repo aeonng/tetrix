@@ -7,7 +7,7 @@
 
 
 void HowToPlay::draw() const {
-    auto it = DrawUtil::backgroundTextures.find(1); 
+    auto it = DrawUtil::backgroundTextures.find(3); 
     if (it != DrawUtil::backgroundTextures.end()) {
         DrawTexture(it->second, 0, 0, WHITE);
     } else {
@@ -18,7 +18,7 @@ void HowToPlay::draw() const {
     float titleWidth = MeasureText(title.c_str(), 40);
     TextUtil::drawText(title, {30+(1280 - titleWidth) / 2.0f, 200}, 45, GOLD);
 
-    TextUtil::drawText("     PRESS H TO RETURN  ", {820, 575}, 21, LIGHTGRAY);
+    TextUtil::drawText("     PRESS H TO RETURN  ", {820, 220}, 21, LIGHTGRAY);
 }
 
 GameState HowToPlay::update() {

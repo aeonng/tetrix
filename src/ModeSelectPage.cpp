@@ -10,7 +10,7 @@ ModeSelectPage::ModeSelectPage(bool single)
 GameState ModeSelectPage::update() {
     if (editingNickname) {
         int key = GetCharPressed();
-        while (key > 0) {
+        while (key > 0) {;
             if (nickname.length() < 10 && key >= 32 && key <= 126)
                 nickname += static_cast<char>(key);
             key = GetCharPressed();
@@ -97,22 +97,22 @@ void ModeSelectPage::draw() {
 
     std::string title = singleMode ? "SINGLE PLAYER SETUP" : "DUAL PLAYER SETUP";
     float titleWidth = MeasureText(title.c_str(), 40);
-    TextUtil::drawTextTitle(title, {30+(1280 - titleWidth) / 2.0f, 200}, 45, GOLD);
+    TextUtil::drawTextTitle(title, {30+(1280 - titleWidth) / 2.0f, 200}, 45, (Color){198, 128, 43, 255});
     
     TextUtil::drawText("     PRESS H TO RETURN  ", {820, 550}, 21, LIGHTGRAY);
     TextUtil::drawText("     PRESS S TO START   ", {820, 575}, 21, RED);
 
     // Mode
-    Color col0_color = (columnIndex == 0) ? GOLD : WHITE;
+    Color col0_color = (columnIndex == 0) ? (Color){198, 128, 43, 255} : WHITE;
     TextUtil::drawText("GAME MODE:", {250, 270}, 30, col0_color);
     for (int i = 0; i < modes.size(); ++i) {
-        Color color = (i == modeIndex) ? GOLD : WHITE;
+        Color color = (i == modeIndex) ? (Color){198, 128, 43, 255} : WHITE;
         TextUtil::drawText(modes[i], {260, 320.0f + i * 50}, 28, color);
     }
     if (modeIndex == 1) {
         if (editingGoal) {
             for (int i = 0; i < sprint.size(); i++) {
-                Color color = (i == sprintIndex) ? GOLD : GRAY;
+                Color color = (i == sprintIndex) ? (Color){198, 128, 43, 255} : GRAY;
                 TextUtil::drawText(std::to_string(sprint[i])+" ROWS", {260, 400.0f + i * 30}, 28, color);
             }
         }
@@ -122,18 +122,18 @@ void ModeSelectPage::draw() {
     }
 
     // Difficulty
-    Color col1_color = (columnIndex == 1) ? GOLD : WHITE;
+    Color col1_color = (columnIndex == 1) ? (Color){198, 128, 43, 255} : WHITE;
     TextUtil::drawText("DIFFICULTY:", {550, 270}, 30, col1_color);
     for (int i = 0; i < difficulties.size(); ++i) {
-        Color color = (i == difficultyIndex) ? GOLD : WHITE;
+        Color color = (i == difficultyIndex) ? (Color){198, 128, 43, 255} : WHITE;
         TextUtil::drawText(difficulties[i], {570, 320.0f + i * 50}, 28, color);
     }
 
     // Nickname (only in single mode)
     if (singleMode) {
-        Color col2_color = (columnIndex == 2) ? GOLD : WHITE;
+        Color col2_color = (columnIndex == 2) ? (Color){198, 128, 43, 255} : WHITE;
         TextUtil::drawText("NICKNAME:", {900, 270}, 30, col2_color);
-        Color color = (columnIndex == 2) ? GOLD : WHITE;
+        Color color = (columnIndex == 2) ? (Color){198, 128, 43, 255} : WHITE;
         std::string displayName = editingNickname ? nickname + "_" : nickname;
         TextUtil::drawText(displayName, {920, 320}, 28, color);
     }

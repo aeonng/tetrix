@@ -37,8 +37,9 @@ void RankingPage::loadScores() {
 
     int score, difficulty;
     float time;
-    while (infile >> score >> difficulty >> time) {
-        entries.push_back({score, difficulty, time});
+    std::string name;
+    while (infile >> score >> difficulty >> time >> name) {
+        entries.push_back({score, difficulty, time, name});
     }
 }
 
@@ -53,7 +54,7 @@ void RankingPage::draw() const {
     
     std::string title = (mode == 0) ? "Marathon Ranking" : "Sprint Ranking";
     float titleWidth = MeasureText(title.c_str(), 40);
-    TextUtil::drawText(title, {30+(1280 - titleWidth) / 2.0f, 200}, 45, GOLD);
+    TextUtil::drawText(title, {30+(1280 - titleWidth) / 2.0f, 200}, 45, (Color){198, 128, 43, 255});
 
     
     TextUtil::drawText("PRESS <- OR -> TO SWITCH", {820, 550}, 21, LIGHTGRAY);
@@ -64,7 +65,8 @@ void RankingPage::draw() const {
     for (size_t i = 0; i < entries.size(); ++i) {
         const auto& e = entries[i];
         std::ostringstream oss;
-        oss << i + 1 << " | SCORE: " << e.score
+        oss << i + 1 << ". NAME: " << e.nickname
+            << " | SCORE: " << e.score
             << " | DIFF: " << (e.difficulty == 0 ? "EASY" : (e.difficulty == 1 ? "NORMAL" : "HARD"))
             << " | TIME: " << static_cast<int>(e.gameTime) << "s";
         TextUtil::drawText(oss.str(), {220, startY + static_cast<float>(i * 30)}, fontSize, RAYWHITE);

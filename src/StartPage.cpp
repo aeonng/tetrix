@@ -70,7 +70,7 @@ void StartPage::draw() {
         float posX = startX + col * spacingX;
         float posY = startY + row * spacingY;
 
-        Color color = (i == selectedIndex) ? GOLD : WHITE;
+        Color color = (i == selectedIndex) ? (Color){198, 128, 43, 255} : WHITE;
         TextUtil::drawText(menuItems[i], {posX, posY}, 30, color);
     }
 

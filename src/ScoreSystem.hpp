@@ -8,6 +8,7 @@ namespace ScoreSystem {
     int score;
     int difficulty;
     float gameTime;
+    std::string nickname; //닉네임 추가
     };
 
     int calculateFinalScore(int baseScore, int difficulty, float gameTime, int mode, int sprintGoalAchieved);

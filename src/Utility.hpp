@@ -52,9 +52,11 @@ namespace AudioUtil {
     void playMoveSound();
     void playDeleteSound();
     void playItemSound();
+    void playblockSound();
+    void playcomboSound();
     void playMainSound();
 
     void updateMainSound();
 
-    extern Sound moveSound;
+    //extern Sound moveSound;
 }

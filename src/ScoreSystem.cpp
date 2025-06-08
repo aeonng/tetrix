@@ -24,8 +24,9 @@ int ScoreSystem::writeScoreIfTop15(const ScoreEntry& entry, int mode) {
     if (infile) {
         int score, diff;
         float time;
-        while (infile >> score >> diff >> time) {
-            entries.push_back({score, diff, time});
+        std::string name; // 닉네임 추가
+        while (infile >> score >> diff >> time >> name) {
+            entries.push_back({score, diff, time, name});
         }
         infile.close();
     }
@@ -48,7 +49,7 @@ int ScoreSystem::writeScoreIfTop15(const ScoreEntry& entry, int mode) {
 
     std::ofstream outfile(filename);
     for (const auto& e : entries) {
-        outfile << e.score << " " << e.difficulty << " " << e.gameTime << "\n";
+        outfile << e.score << " " << e.difficulty << " " << e.gameTime << " " << e.nickname << "\n";
     }
     return rank;
 }

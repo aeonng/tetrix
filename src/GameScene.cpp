@@ -10,21 +10,22 @@
 std::mt19937 rng(std::random_device{}());
 std::uniform_int_distribution<int> dist(0, 6);
 
-GameScene::GameScene(bool isSingle, int mode, int difficulty, int sprint_goal)
+GameScene::GameScene(bool isSingle, int mode, int difficulty, int sprint_goal, const std::string& name)
     : board(10, 20), boardP2(10, 20), isSingleMode(isSingle), mode(mode),
-      sprint_goal(sprint_goal), difficulty(difficulty) {
-    board.x_offset = isSingle ? ((1280-DrawUtil::CELL_SIZE*10)/2.0f): 100;
-    boardP2.x_offset = 700; // P2 보드는 오른쪽으로 12칸 이동
+      sprint_goal(sprint_goal), difficulty(difficulty), nickname(name) {
+    board.x_offset = isSingle ? ((1280-DrawUtil::CELL_SIZE*10)/2.0f): 130;
+    boardP2.x_offset = 750; // P2 보드는 오른쪽으로 12칸 이동
     board.y_offset = 80;
     boardP2.y_offset = 80;
 }
 
 GameState GameScene::update() {
     if (IsKeyPressed(KEY_ENTER)) {
+        AudioUtil::playMoveSound();   
         isPaused = !isPaused;
     }
 
-    if (isPaused) return GameState::GAME_END;
+    if (isPaused) return GameState::GAME_RUNNING;
 
     elapsedTime += GetFrameTime();
     if (clearEffectTimerP1 > 0) clearEffectTimerP1 -= GetFrameTime();
@@ -114,8 +115,12 @@ void GameScene::updatePlayer(int p) {
                 if (clearedRef > 0) {  // 줄 삭제 후 아이템을 획득한 경우에만
                     AudioUtil::playItemSound();  // 아이템 획득 시 효과음 재생
                 }
-                
-                if (wasCleared) comboRef++;
+                if (wasCleared) {
+                    comboRef++;
+                    if (comboRef >= 2) {  // 콤보 2 이상일 때만 콤보 효과음!
+                        AudioUtil::playcomboSound();
+                    }
+                }
                 lines += clearedRef;
                 scoreRef += 100 * clearedRef + 100 * comboRef;
                 clearedItems = b.popClearedItems();
@@ -167,6 +172,14 @@ void GameScene::updatePlayer(int p) {
 }
 
 void GameScene::render() const {
+
+    auto it = DrawUtil::backgroundTextures.find(2); 
+    if (it != DrawUtil::backgroundTextures.end()) {
+        DrawTexture(it->second, 0, 0, WHITE);
+    } else {
+        ClearBackground(RAYWHITE);  
+    }
+
     board.draw();
     if (!isSingleMode) boardP2.draw();
 
@@ -207,7 +220,7 @@ void GameScene::render() const {
         float y_offset = (p == 1) ? board.y_offset : boardP2.y_offset;
         float timer = (p == 1) ? clearEffectTimerP1 : clearEffectTimerP2;
         if (0 < timer) {
-            if (timer > 0.25f) {
+            if (timer > 0.5f) {
                 for (int y : lines) {
                     for (int x = 0; x < 10; ++x) {
                         Color c = ((clearEffectDuration- timer) < 0.08f || (clearEffectDuration- timer) > 0.16f) ? RAYWHITE : WHITE;
@@ -215,11 +228,11 @@ void GameScene::render() const {
                     }
                 }
             }
-        displaySimultaneousClear(1);
-        if (!isSingleMode) displaySimultaneousClear(2);
-    
-        displayCombo(1);
-        if (!isSingleMode) displayCombo(2);
+            displaySimultaneousClear(1);
+            if (!isSingleMode) displaySimultaneousClear(2);
+        
+            displayCombo(1);
+            if (!isSingleMode) displayCombo(2);
         }
     }
 
@@ -264,7 +277,7 @@ void GameScene::displayNextBlock(int p) const {
     float offsetX = (p == 1) ? board.x_offset + 330 : boardP2.x_offset + 330;
     float offsetY = (p == 1) ? board.y_offset + 200 : boardP2.y_offset + 200;
 
-    TextUtil::drawText("NEXT", {offsetX, offsetY - 30}, 24, DARKBLUE);
+    TextUtil::drawText("NEXT", {offsetX, offsetY - 30}, 24, RAYWHITE);
 
     const auto& shape = next.getShape();
     for (int i = 0; i < 4; ++i) {
@@ -286,7 +299,7 @@ void GameScene::displayScore(int p) const {
 
     std::string scoreText = "SCORE: " + std::to_string(scoreVal);
     Vector2 pos = { x_offset + 330.0f, y_offset + 80.0f };
-    TextUtil::drawText(scoreText, pos, 24, DARKGRAY);
+    TextUtil::drawText(scoreText, pos, 24, RAYWHITE);
 }
 
 void GameScene::displaySimultaneousClear(int p) const {
@@ -327,7 +340,7 @@ void GameScene::displayCombo(int p) const {
     float boardY = (p == 1 ? board.y_offset : boardP2.y_offset);
     float posX = boardX + (10*DrawUtil::CELL_SIZE - textWidth) / 2.0f;
     float posY = y * DrawUtil::CELL_SIZE + boardY - fontSize - 28.0;
-    TextUtil::drawText(text, {posX, posY}, fontSize, YELLOW);
+    TextUtil::drawText(text, {posX, posY}, fontSize, WHITE);
 }
 
 Block GameScene::spawnBlock() {
@@ -379,7 +392,7 @@ void GameScene::displayElapsedTime() const {
 
     std::string timeText = (minutes < 10 ? "0" : "") + std::to_string(minutes) + ":" + (seconds < 10 ? "0" : "") + std::to_string(seconds);
     float textWidth = MeasureText(timeText.c_str(), fontSize);
-    TextUtil::drawText(timeText, {(GetScreenWidth() - textWidth)/2.0f, 10}, fontSize, BLACK);
+    TextUtil::drawText(timeText, {(GetScreenWidth() - textWidth)/2.0f, 20}, fontSize, RAYWHITE);
 }
 
 void GameScene::BlockSwitch(int p) {
@@ -401,35 +414,42 @@ void GameScene::handleInput(int p) {
     float &speedYRef = (p == 1) ? speed_y : speed_y_P2;
 
     if (IsKeyPressed(p == 1 ? KEY_SLASH : KEY_R)) {
+        AudioUtil::playblockSound();   
         isInputRef = true;
         b.placeBlock(cur);
         if (p == 1) state = 2;
         else stateP2 = 2;
     }
     if (IsKeyPressed(p == 1 ? KEY_LEFT : KEY_F)) {
+        AudioUtil::playblockSound();    
         isInputRef = true;
         cur.x -= 1;
         if (!b.canPlaceBlock(cur, cur.x, (cur.y_offset + DrawUtil::CELL_SIZE - 1) / DrawUtil::CELL_SIZE))
             cur.x += 1;
     }
     if (IsKeyPressed(p == 1 ? KEY_RIGHT : KEY_H)) {
+        AudioUtil::playblockSound();  
         isInputRef = true;
         cur.x += 1;
         if (!b.canPlaceBlock(cur, cur.x, (cur.y_offset + DrawUtil::CELL_SIZE - 1) / DrawUtil::CELL_SIZE))
             cur.x -= 1;
     }
     if (IsKeyDown(p == 1 ? KEY_DOWN : KEY_G)) {
+        AudioUtil::playblockSound();  
         speedYRef *= 5;
     }
     if (IsKeyPressed(p == 1 ? KEY_K : KEY_ONE)) {
+        AudioUtil::playblockSound();   
         isInputRef = true;
         cur.attemptRotateCounterClockwise(b);
     }
     if (IsKeyPressed(p == 1 ? KEY_L : KEY_TWO)) {
+        AudioUtil::playblockSound();  
         isInputRef = true;
         cur.attemptRotateClockwise(b);
     }
     if (IsKeyPressed(p == 1 ? KEY_SEMICOLON : KEY_THREE)) {
+        AudioUtil::playblockSound();  
         isInputRef = true;
         BlockSwitch(p);
     }

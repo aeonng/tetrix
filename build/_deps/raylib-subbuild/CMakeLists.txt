@@ -1,7 +1,7 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
-# file Copyright.txt or https://cmake.org/licensing for details.
+# file LICENSE.rst or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 3.31.7)
+cmake_minimum_required(VERSION 4.0.1)
 
 # Reject any attempt to use a toolchain file. We must not use one because
 # we could be downloading it here. If the CMAKE_TOOLCHAIN_FILE environment
@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(raylib-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/raysan5/raylib.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "master"
-                    SOURCE_DIR          "C:/tetris_cpp-project/build/_deps/raylib-src"
-                    BINARY_DIR          "C:/tetris_cpp-project/build/_deps/raylib-build"
+                    SOURCE_DIR          "C:/Users/shahn/Documents/SNU/2025-1/tetris/tetris_cpp-project_1/build/_deps/raylib-src"
+                    BINARY_DIR          "C:/Users/shahn/Documents/SNU/2025-1/tetris/tetris_cpp-project_1/build/_deps/raylib-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

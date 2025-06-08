@@ -9,9 +9,23 @@ EndScreen::EndScreen(const GameScene& scene) {
     if (isSingle) {
         playerScore = scene.score;
         playTime = scene.elapsedTime;
+
+        // sprint 관련 값 복사
+        mode = scene.mode;
+        sprintGoal = scene.sprint_goal;
+        numClearLine = scene.num_clear_line;
+
         int sprintAchieved = (scene.mode == 1 && scene.num_clear_line >= scene.sprint_goal) ? 1 : 0;
         int finalScore = ScoreSystem::calculateFinalScore(playerScore, scene.difficulty, playTime, scene.mode, sprintAchieved);
-        ranking = ScoreSystem::writeScoreIfTop15({finalScore, scene.difficulty, playTime}, scene.mode);
+        //ranking = ScoreSystem::writeScoreIfTop15({finalScore, scene.difficulty, playTime}, scene.mode);
+        ScoreSystem::ScoreEntry entry = {
+            finalScore,
+            scene.difficulty,
+            playTime,
+            scene.nickname  // <-- nickname도 함께 저장
+        };
+        ranking = ScoreSystem::writeScoreIfTop15(entry, scene.mode);
+        
         newRecord = (ranking > 0);
         highestRecord = (ranking == 1);
     } else {
@@ -29,9 +43,15 @@ void EndScreen::render() const {
         TextUtil::drawText("Score: " + std::to_string(playerScore), {200, 160}, 32, LIGHTGRAY);
         TextUtil::drawText("Time: " + std::to_string(static_cast<int>(playTime)) + "s", {200, 200}, 32, LIGHTGRAY);
 
+        // Sprint 모드일 때 clear line 표시
+        if (mode == 1) {
+            std::string lineText = "Lines Cleared: " + std::to_string(numClearLine) + " / " + std::to_string(sprintGoal);
+            TextUtil::drawText(lineText, {200, 240}, 32, LIGHTGRAY);
+        }
+
         if (newRecord) {
             std::string text = (highestRecord ? "New Highest Record!" : "New Record! Ranking #" + std::to_string(ranking));
-            TextUtil::drawText(text, {200, 260}, 28, GOLD);
+            TextUtil::drawText(text, {200, 280}, 28, GOLD);
         }
     } else {
         TextUtil::drawText("The Winner is " + winner, {200, 100}, 48, WHITE);

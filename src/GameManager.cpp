@@ -70,7 +70,7 @@ void GameManager::update() {
                 sprint_goal = modeSelectPage->getSprintGoal();
                 nickname = modeSelectPage->getNickname();
                 if (gameScene) delete gameScene;  // 먼저 기존 것이 있다면 삭제
-                gameScene = new GameScene(singlePlayerMode, mode, difficulty, sprint_goal);  // 새로 할당
+                gameScene = new GameScene(singlePlayerMode, mode, difficulty, sprint_goal, nickname);  // 새로 할당
             }
             break;
         

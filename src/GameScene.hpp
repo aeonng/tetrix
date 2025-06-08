@@ -9,7 +9,7 @@
 
 class GameScene {
 public:
-    GameScene(bool isSingle, int mode, int difficulty, int sprint_goal);
+    GameScene(bool isSingle, int mode, int difficulty, int sprint_goal, const std::string& nickname);
     GameState update();
     void render() const;
 
@@ -26,6 +26,7 @@ public:
     int mode; // 0: Marathon, 1: Sprint
     int sprint_goal;
     int difficulty;
+    std::string nickname;
 
     float elapsedTime = 0;
 
@@ -68,7 +69,7 @@ private:
 
     float clearEffectTimerP1 = 0;
     float clearEffectTimerP2 = 0;
-    float clearEffectDuration = 0.5f;
+    float clearEffectDuration = 1.25f;
 
     float speed_y = 1.5f;
     float speed_y_P2 = 1.5f;
