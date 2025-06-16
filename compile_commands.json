@@ -1,0 +1,254 @@
+[
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\Block.cpp.obj -c C:\\tetrix-master\\src\\Block.cpp",
+  "file": "C:\\tetrix-master\\src\\Block.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\Block.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\Board.cpp.obj -c C:\\tetrix-master\\src\\Board.cpp",
+  "file": "C:\\tetrix-master\\src\\Board.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\Board.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\EndScreen.cpp.obj -c C:\\tetrix-master\\src\\EndScreen.cpp",
+  "file": "C:\\tetrix-master\\src\\EndScreen.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\EndScreen.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\GameManager.cpp.obj -c C:\\tetrix-master\\src\\GameManager.cpp",
+  "file": "C:\\tetrix-master\\src\\GameManager.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\GameManager.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\GameScene.cpp.obj -c C:\\tetrix-master\\src\\GameScene.cpp",
+  "file": "C:\\tetrix-master\\src\\GameScene.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\GameScene.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\HowToPlay.cpp.obj -c C:\\tetrix-master\\src\\HowToPlay.cpp",
+  "file": "C:\\tetrix-master\\src\\HowToPlay.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\HowToPlay.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\Item.cpp.obj -c C:\\tetrix-master\\src\\Item.cpp",
+  "file": "C:\\tetrix-master\\src\\Item.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\Item.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\ModeSelectPage.cpp.obj -c C:\\tetrix-master\\src\\ModeSelectPage.cpp",
+  "file": "C:\\tetrix-master\\src\\ModeSelectPage.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\ModeSelectPage.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\RankingPage.cpp.obj -c C:\\tetrix-master\\src\\RankingPage.cpp",
+  "file": "C:\\tetrix-master\\src\\RankingPage.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\RankingPage.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\SRS.cpp.obj -c C:\\tetrix-master\\src\\SRS.cpp",
+  "file": "C:\\tetrix-master\\src\\SRS.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\SRS.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\ScoreSystem.cpp.obj -c C:\\tetrix-master\\src\\ScoreSystem.cpp",
+  "file": "C:\\tetrix-master\\src\\ScoreSystem.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\ScoreSystem.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\StartPage.cpp.obj -c C:\\tetrix-master\\src\\StartPage.cpp",
+  "file": "C:\\tetrix-master\\src\\StartPage.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\StartPage.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\Utility.cpp.obj -c C:\\tetrix-master\\src\\Utility.cpp",
+  "file": "C:\\tetrix-master\\src\\Utility.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\Utility.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -g -std=gnu++17 -o CMakeFiles\\tetris_cpp.dir\\src\\main.cpp.obj -c C:\\tetrix-master\\src\\main.cpp",
+  "file": "C:\\tetrix-master\\src\\main.cpp",
+  "output": "CMakeFiles\\tetris_cpp.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\raudio.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\raudio.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rcore.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rcore.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rcore.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rcore.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rmodels.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rmodels.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rmodels.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rmodels.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rshapes.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rshapes.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rshapes.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rshapes.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtext.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rtext.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rtext.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtext.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtextures.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rtextures.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\rtextures.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtextures.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src -isystem C:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\utils.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\utils.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\utils.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\utils.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\context.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\init.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\input.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\input.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\monitor.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\platform.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\platform.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\vulkan.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\vulkan.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\window.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\egl_context.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\egl_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\osmesa_context.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\osmesa_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_init.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_monitor.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_window.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_joystick.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_joystick.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_module.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_module.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_time.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_time.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_thread.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_thread.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_init.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_joystick.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_joystick.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_monitor.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_window.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj"
+},
+{
+  "directory": "C:/tetrix-master/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/tetrix-master/src -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/include -IC:/tetrix-master/build/_deps/raylib-src/src/external/glfw/src -IC:/tetrix-master/build/_deps/raylib-build/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=c99 -Wall -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\wgl_context.c",
+  "file": "C:\\tetrix-master\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\wgl_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj"
+}
+]
