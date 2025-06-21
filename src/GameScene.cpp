@@ -268,7 +268,7 @@ void GameScene::drawGhostBlock(int p) const {
     int gy = b.getGhostY(cur);
     ghost.setPosition(cur.x, gy);
     ghost.y_offset = 0;
-    std::cout << "p: " << p << " cur.x: " << cur.x << " gy: " << gy << std::endl;
+    //std::cout << "p: " << p << " cur.x: " << cur.x << " gy: " << gy << std::endl;
     ghost.draw(true, b);
 }
 
@@ -329,9 +329,9 @@ void GameScene::displaySimultaneousClear(int p) const {
 void GameScene::displayCombo(int p) const {
     const std::vector<int>& lines = (p == 1) ? lastClearedLines : lastClearedLinesP2;
     int comboVal = (p == 1) ? combo : comboP2;
-    if (comboVal < 2 || lines.empty()) return;
+    if (comboVal < 1 || lines.empty()) return;
 
-    std::string text = "COMBO X" + std::to_string(comboVal);
+    std::string text = "COMBO X" + std::to_string(comboVal+1);
     std::cout << text << std::endl;
     int y = lines.front();
     float fontSize = 32;
