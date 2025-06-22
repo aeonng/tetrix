@@ -2,33 +2,83 @@
 #include "Utility.hpp"
 
 namespace TextUtil {
-    static Font regularFont;
-    static Font boldFont;
-    static Font numFont;
+    Font regularFont;
+    Font boldFont;
+    //Font numFont;
 
     void loadFonts() {
         regularFont = LoadFont("assets/fonts/IMFellEnglish-Regular.ttf");
         boldFont = LoadFont("assets/fonts/IMFellEnglish-Regular.ttf");
-        numFont = LoadFont("assets/fonts/chinese.msyh.ttf");
+        //numFont = LoadFont("assets/fonts/chinese.msyh.ttf");
     }
 
     void unloadFonts() {
         UnloadFont(regularFont);
         UnloadFont(boldFont);
-        UnloadFont(numFont);
+        //UnloadFont(numFont);
     }
 
     void drawText(const std::string& text, Vector2 position, float fontSize, Color color) {
-        DrawTextEx(regularFont, text.c_str(), position, fontSize, 1, color);
-    }
+        int numberFontSize = fontSize * 1.6f; // 숫자는 더 크게 표시
+        int spacing = 1;
+        Vector2 pos = position;
+        int yOffset = fontSize * 0.4f;
+
+        size_t i = 0;
+        while (i < text.size()) {
+            bool isDigit = std::isdigit(text[i]);
+
+            size_t start = i;
+            while (i < text.size() && std::isdigit(text[i]) == isDigit) {
+                i++;
+            }
+
+            std::string segment = text.substr(start, i - start);
+            int currentFontSize = isDigit ? numberFontSize : fontSize;
+            Vector2 drawPos = pos;
+            if (isDigit) {
+                drawPos.y -= yOffset; // 숫자는 위로 살짝 올림
+            }
+
+            DrawTextEx(regularFont, segment.c_str(), drawPos, currentFontSize, spacing, color);
+
+            Vector2 textSize = MeasureTextEx(regularFont, segment.c_str(), currentFontSize, spacing);
+            pos.x += textSize.x;
+        }
+    } 
 
     void drawTextTitle(const std::string& text, Vector2 position, float fontSize, Color color) {
-        DrawTextEx(boldFont, text.c_str(), position, fontSize, 2, color);
-    }
+        int numberFontSize = fontSize * 1.6f; // 숫자 크기 더 크게 설정
+        int spacing = 2;
+        Vector2 pos = position;
+        int yOffset = fontSize * 0.4f;
 
-    void numText(const std::string& text, Vector2 position, float fontSize, Color color) {
-        DrawTextEx(numFont, text.c_str(), position, fontSize, 1, color);
+        size_t i = 0;
+        while (i < text.size()) {
+            // 현재 문자가 숫자인지 확인
+            bool isDigit = std::isdigit(text[i]);
+
+            // 같은 타입(숫자 or 문자)인 문자열 블록 추출
+            size_t start = i;
+            while (i < text.size() && std::isdigit(text[i]) == isDigit) {
+                i++;
+            }
+
+            std::string segment = text.substr(start, i - start);
+            int currentFontSize = isDigit ? numberFontSize : fontSize;
+            Vector2 drawPos = pos;
+            if (isDigit) {
+                drawPos.y -= yOffset; // 숫자는 위로 살짝 올림
+            }
+            // 현재 블록 그리기
+            DrawTextEx(boldFont, segment.c_str(), pos, currentFontSize, spacing, color);
+
+            // 위치 업데이트
+            Vector2 textSize = MeasureTextEx(boldFont, segment.c_str(), currentFontSize, spacing);
+            pos.x += textSize.x;
+        }
     }
+    
 }
 
 namespace DrawUtil {

@@ -15,7 +15,7 @@ Item::Item(int t, int x, int y)
 
 int Item::applyEffect(const std::vector<int>& items, Board& board) {
     total_grey_cleared = 0;
-    for (int type = items.size() - 1; type >= 0; --type) {
+    for (int type = 2; type >= 0; --type) {
         for (int i = 0; i < items[type]; ++i) {
             applyEffect(type, board); // 기존 단건 함수 재사용
         }

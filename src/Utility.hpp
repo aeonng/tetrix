@@ -5,6 +5,10 @@
 #include <unordered_map>
 
 namespace TextUtil {
+    extern Font regularFont;
+    extern Font boldFont;
+    //extern Font numFont;
+
     void loadFonts();
     void unloadFonts();
 

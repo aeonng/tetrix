@@ -10,8 +10,8 @@ namespace fs = std::filesystem;
 int ScoreSystem::calculateFinalScore(int baseScore, int difficulty, float gameTime, int mode, int sprintGoalAchieved) {
     float multiplier = (difficulty == 0) ? 1.0f : (difficulty == 1) ? 1.3f : 1.6f;
     int bonus = 0;
-    if (mode == 0) bonus = static_cast<int>(1000.0f / (gameTime + 1.0f));
-    else if (mode == 1 && sprintGoalAchieved) bonus = 5000;
+    if (mode == 0) bonus = 200.0f * static_cast<int>(gameTime / 60.0f);
+    else if (mode == 1 && sprintGoalAchieved) bonus = 1000;
     return static_cast<int>((baseScore + bonus) * multiplier);
 }
 
@@ -56,8 +56,8 @@ int ScoreSystem::writeScoreIfTop15(const ScoreEntry& entry, int mode) {
 
 std::string ScoreSystem::determineWinner(const GameScene& scene) {
     if (scene.mode == 0) { // marathon
-        if (scene.gameOverTime2 > scene.gameOverTime) return "P2";
-        if (scene.gameOverTime2 < scene.gameOverTime) return "P1";
+        if (scene.gameOverTime2 > scene.gameOverTime) return "P1";
+        if (scene.gameOverTime2 < scene.gameOverTime) return "P2";
     } else if (scene.mode == 1) {
         if (scene.num_clear_lineP2 > scene.num_clear_line) return "P2";
         if (scene.num_clear_lineP2 < scene.num_clear_line) return "P1";

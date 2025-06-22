@@ -1,6 +1,6 @@
 #include "StartPage.hpp"
 #include "Utility.hpp"
-
+#include <string.h>
 StartPage::StartPage() {
     selectedIndex = 0;
 }
@@ -75,12 +75,12 @@ void StartPage::draw() {
             TextUtil::drawText(menuItems[i], {posX, posY}, 30, color);
         }
         else if (i==2) {
-            TextUtil::numText("2", {posX+15, posY-2}, 30, color);
-            TextUtil::drawText(menuItems[i], {posX+15+15, posY}, 30, color);
+            TextUtil::drawText("2", {posX+25, posY-2}, 30, color);
+            TextUtil::drawText(menuItems[i], {posX+25+15, posY}, 30, color);
         }
         else {
-            TextUtil::numText("1", {posX, posY-2}, 30, color);
-            TextUtil::drawText(menuItems[i], {posX+15, posY}, 30, color);
+            TextUtil::drawText("1", {posX+13, posY-2}, 30, color);
+            TextUtil::drawText(menuItems[i], {posX+27, posY}, 30, color);
         }
         
     }
