@@ -47,8 +47,8 @@ void EndScreen::render() const {
             } else {
                 ClearBackground(RAYWHITE);  
             }
-            TextUtil::numText(std::to_string(playerScore), {633, 570}, 35, WHITE);
-            TextUtil::numText(std::to_string(static_cast<int>(playTime)) + "s", {633, 525}, 35, WHITE);
+            TextUtil::drawText(std::to_string(playerScore), {633, 570}, 35, WHITE);
+            TextUtil::drawText(std::to_string(static_cast<int>(playTime)) + "s", {633, 525}, 35, WHITE);
         } else {
             //sprint 모드
             if (sprintAchieved == 1) {
@@ -66,10 +66,10 @@ void EndScreen::render() const {
                     ClearBackground(RAYWHITE);  
                 }
             }
-            TextUtil::numText(std::to_string(playerScore), {633, 570}, 35, WHITE);
-            TextUtil::numText(std::to_string(static_cast<int>(playTime)) + "s", {633, 525}, 35, WHITE);
+            TextUtil::drawText(std::to_string(playerScore), {633, 570}, 35, WHITE);
+            TextUtil::drawText(std::to_string(static_cast<int>(playTime)) + "s", {633, 525}, 35, WHITE);
             std::string lineText = std::to_string(numClearLine) + " / " + std::to_string(sprintGoal);
-            TextUtil::numText(lineText, {633, 615}, 35, LIGHTGRAY);
+            TextUtil::drawText(lineText, {633, 615}, 35, LIGHTGRAY);
         }
         
         /*
@@ -99,9 +99,9 @@ void EndScreen::render() const {
                 ClearBackground(RAYWHITE);  
             }
         }
-        TextUtil::numText(std::to_string(score1), {655, 570}, 35, WHITE);
-        TextUtil::numText(std::to_string(score2), {655, 615}, 35, WHITE);
-        TextUtil::numText(std::to_string(static_cast<int>(totalTime)) + "s", {633, 525}, 35, WHITE);
+        TextUtil::drawText(std::to_string(score1), {655, 570}, 35, WHITE);
+        TextUtil::drawText(std::to_string(score2), {655, 615}, 35, WHITE);
+        TextUtil::drawText(std::to_string(static_cast<int>(totalTime)) + "s", {633, 525}, 35, WHITE);
     }
 }
 

@@ -33,7 +33,7 @@ bool Board::canPlaceBlock(const Block& block, int x, int y) const {
 void Board::placeBlock(const Block& block) { //issue
     const auto& shape = block.getShape();
     int x = block.x, y = getGhostY(block);
-    std::cout << "getghostY: " << y << std::endl;
+    //std::cout << "getghostY: " << y << std::endl;
     int b = block.blockId;
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
@@ -84,7 +84,7 @@ int Board::clearFullLines() {
     num_cleared_item = {0, 0, 0, 0};        // 아이템 효과도 초기화
 
     std::vector<int> rowsToClear;
-
+    
     // 1. 삭제할 줄 인덱스 수집
     for (int i = 0; i < height; i++) {
         if (isFull(i)) {
@@ -172,16 +172,20 @@ int Board::getGhostY(const Block& block) const {
 
 int Board::clearBottomLines(int count) {
     int grey_cleared = 0;
+    count = std::min(count, height);
+
     for (int i = 0; i < count; ++i) {
-        for (int y = height - 1; y >= 0; --y) {
-            for (int x = 0; x < width; ++x) {
-                if (grid[y][x].blockType == -2) grey_cleared += 1; 
-                grid.erase(grid.begin() + y);
-                grid.insert(grid.begin(), std::vector<Grid>(width, Grid()));
-                //}
-            }
-        }
+        int y = height - 1 - i;
+        if (grid[y][0].blockType == -2) grey_cleared++;
+        // 줄 삭제
+        grid.erase(grid.begin() + y);
     }
+
+    // 삭제된 줄 수만큼 맨 위에 빈 줄 추가
+    for (int i = 0; i < count; ++i) {
+        grid.insert(grid.begin(), std::vector<Grid>(width, Grid()));
+    }
+
     return grey_cleared;
 }
 

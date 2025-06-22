@@ -2,6 +2,7 @@
 #include "ModeSelectPage.hpp"
 #include "Utility.hpp"
 #include <raylib.h>
+#include <string.h>
 
 ModeSelectPage::ModeSelectPage(bool single)
     : singleMode(single), columnIndex(0), modeIndex(0), editingGoal(false), difficultyIndex(0), \
@@ -100,10 +101,10 @@ void ModeSelectPage::draw() {
     // Mode
     Color col0_color = (columnIndex == 0) ? (Color){198, 128, 43, 255} : WHITE;
     Color col1_color = (columnIndex == 1) ? (Color){198, 128, 43, 255} : WHITE;
-    float modeTitleX = singleMode ? 250 : 348;
-    float modeOptionX = singleMode ? 260 : 350;
-    float diffTitleX = singleMode ? 568 : 740;
-    float diffOptionX = singleMode ? 570 : 750;
+    float modeTitleX = (singleMode ? 248 : 348);
+    float modeOptionX = modeTitleX + (singleMode ? 2 : 10);
+    float diffTitleX = singleMode ? 558 : 740;
+    float diffOptionX = diffTitleX + (singleMode ? 2 : 10);
 
     // 적용
     TextUtil::drawText("GAME MODE:", {modeTitleX, 280}, 30, col0_color);
@@ -122,20 +123,20 @@ void ModeSelectPage::draw() {
         for (int i = 0; i < sprint.size(); i++) {
             Color color = (i == sprintIndex) ? (Color){198, 128, 43, 255} : GRAY;
             std::string text = std::to_string(sprint[i]) + " ROWS";
-            float textWidth = MeasureText(text.c_str(), 28);
+            float textWidth = MeasureText(text.c_str(), 30);
             float centeredX = 78.0f + modeOptionX - textWidth / 2.0f;
             TextUtil::drawText(text, {centeredX, 430.0f + i * 30}, 28, color);
         }
     }
     else {
         std::string text = std::to_string(sprint[sprintIndex]) + " ROWS";
-        float textWidth = MeasureText(text.c_str(), 28);
+        float textWidth = MeasureText(text.c_str(), 30);
         float centeredX = 78.0f + modeOptionX - textWidth / 2.0f;
         TextUtil::drawText(text, {centeredX, 430.0f}, 28, GRAY);
     }
 }
 
-    TextUtil::drawText("DIFFICULTY:", {diffTitleX, 280}, 30, col1_color);
+    TextUtil::drawText("DIFFICULTY:", {diffTitleX, 280},30, col1_color);
 
     for (int i = 0; i < difficulties.size(); ++i) {
         Color color = (i == difficultyIndex) ? (Color){198, 128, 43, 255} : GRAY;
@@ -153,7 +154,7 @@ void ModeSelectPage::draw() {
         if (editingGoal) {
             for (int i = 0; i < sprint.size(); i++) {
                 Color color = (i == sprintIndex) ? (Color){198, 128, 43, 255} : GRAY;
-                TextUtil::drawText(std::to_string(sprint[i])+" ROWS", {260, 400.0f + i * 30}, 28, color);
+                TextUtil::drawText(std::to_string(sprint[i])+" ROWS", {260, 400.0f + i * 30}, 28, colPor);
             }
         }
         else {
@@ -175,7 +176,9 @@ void ModeSelectPage::draw() {
         TextUtil::drawText("NICKNAME:", {880, 280}, 30, col2_color);
         Color color = (columnIndex == 2) ? (Color){198, 128, 43, 255} : WHITE;
         std::string displayName = editingNickname ? nickname + "_" : nickname;
-        TextUtil::drawText(displayName, {880, 340}, 28, color);
+        float nicknameWidth = MeasureTextEx(TextUtil::regularFont, "NICKNAME:", 30, 1.0f).x;
+        float displayNameWidth = MeasureTextEx(TextUtil::regularFont, displayName.c_str(), 30, 1.0f).x;
+        TextUtil::drawText(displayName, {880.0f - displayNameWidth/2.0f + nicknameWidth/2.0f, 340}, 30, color);
     }
 }
 

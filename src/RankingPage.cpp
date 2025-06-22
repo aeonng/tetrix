@@ -79,20 +79,20 @@ void RankingPage::draw() const {
         float y = startY + static_cast<float>(i * 30);
 
         // 랭크 
-        TextUtil::numText(std::to_string(i + 1), {xRank, y}, 30, RAYWHITE);
+        TextUtil::drawText(std::to_string(i + 1), {xRank, y}, 30, RAYWHITE);
 
         // 닉네임
         TextUtil::drawText(e.nickname, {xName, y}, fontSize, RAYWHITE);
 
         // 점수
-        TextUtil::numText(std::to_string(e.score), {xScore, y}, 25, RAYWHITE);
+        TextUtil::drawText(std::to_string(e.score), {xScore, y}, 25, RAYWHITE);
 
         // 난이도
         std::string levelStr = (e.difficulty == 0 ? "Easy" : (e.difficulty == 1 ? "Normal" : "Hard"));
         TextUtil::drawText(levelStr, {xLevel, y}, fontSize, RAYWHITE);
 
         // 시간
-        TextUtil::numText(std::to_string(static_cast<int>(e.gameTime)) + "s", {xTime, y}, 25, RAYWHITE);
+        TextUtil::drawText(std::to_string(static_cast<int>(e.gameTime)) + "s", {xTime, y}, 25, RAYWHITE);
     }
     
     /*float startY = 250;
