@@ -47,7 +47,7 @@ GameState GameScene::update() {
             }
         }
     }
-    else if (mode == 1) {
+    else if (mode == 1) { //hello
         if (!isSingleMode) {
             if (gameover && gameoverP2) {
                 return GameState::GAME_END;
